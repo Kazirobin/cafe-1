@@ -5,21 +5,21 @@ import Bookmark from './bookmark'
 const Blogs = () => {
     const [blogs,setBlogs] = useState([])
     const [marks,setMarks] = useState([])
+    const [delate,setDelate] = useState([])
+
     const handleBlog = (blog) => { 
       const newMarks =[...marks,blog]
       setMarks(newMarks)
      }
-    const handleMark = (blog,index) => { 
-      const isMark = marks.find((mark) =>  mark.id ===  blog.id)
-      if(isMark){
 
+
+    const handleMark = (blog,index) => { 
+      
         const newMarks = marks.filter((_, i) => i !== index);
         setMarks(newMarks)
-      }else{
-        const newMarks =[...marks,blog]
-        setMarks(newMarks)
-      }
+    
      }
+
     useEffect(() => {  
         fetch("blogs.json")
         .then(res => res.json())
