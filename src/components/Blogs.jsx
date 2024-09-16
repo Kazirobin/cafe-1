@@ -39,7 +39,7 @@ const Blogs = () => {
     <div className='w-1/2'>
     <h1 className=' text-red-700 font-bold text-center m-auto w-2/3'>This is Bookmarks</h1>
     {
-      marks.map((mark,index) => <Bookmark key={mark.id} index={index} blog={mark} handleMark={handleMark}/>)
+      marks.map((mark,index) => <Bookmark key={mark.id} index={index} blog={mark} handleMark={handleMark} />)
     }
 
     </div>
