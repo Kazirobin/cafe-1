@@ -5,7 +5,6 @@ import Bookmark from 'Bookmark'
 const Blogs = () => {
     const [blogs,setBlogs] = useState([])
     const [marks,setMarks] = useState([])
-    const [delate,setDelate] = useState([])
 
     const handleBlog = (blog) => { 
       const newMarks =[...marks,blog]
